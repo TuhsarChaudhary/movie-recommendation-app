@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1>Movie Recommendation</h1>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <h1>Movie Recommendation System</h1>
+            <div class="form-group">
+                <label for="genre">Preferred Genre:</label>
+                <select id="genre">
+                    <option value="Action">Action</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="duration">Preferred Movie Duration:</label>
+                <select id="duration">
+                    <option value="Short">Short (under 90 minutes)</option>
+                    <option value="Medium">Medium (90-120 minutes)</option>
+                    <option value="Long">Long (over 120 minutes)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="mood">Mood:</label>
+                <select id="mood">
+                    <option value="Happy">Happy</option>
+                    <option value="Relaxed">Relaxed</option>
+                    <option value="Excited">Excited</option>
+                    <option value="Adventurous">Adventurous</option>
+                </select>
+            </div>
+            <button onclick="getRecommendation()">Get Recommendation</button>
+        </div>
+        <div class="recommendation-container" id="recommendation-container">
+            <div id="recommendation"></div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Movie Recommendation System. All rights reserved.</p>
+    </footer>
+    
+    <script src="../static/js/script.js"></script>
+</body>
+</html>

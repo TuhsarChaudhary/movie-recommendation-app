@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #2c2c2c, #1a1a1a, #0d0d0d, #000000, #2a0000);
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+.navbar {
+    width: 100%;
+    padding: 15px;
+    background-color: #333;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.navbar h1 {
+    margin: 0;
+    color: #ff4d4d;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px; /* Height of navbar */
+    padding-bottom: 40px; /* Height of footer */
+    overflow-y: auto;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ff4d4d;
+}
+
+select, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e60000;
+}
+
+.recommendation-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    display: none; /* Hide by default */
+}
+
+#recommendation {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ff4d4d;
+}
+
+.footer {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.footer p {
+    margin: 0;
+    color: #ff4d4d;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
