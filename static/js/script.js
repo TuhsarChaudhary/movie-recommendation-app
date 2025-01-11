@@ -3,7 +3,7 @@ function getRecommendation() {
     const duration = document.getElementById('duration').value;
     const mood = document.getElementById('mood').value;
 
-    fetch('https://movie-recommendation-il9ixouex.vercel.app/recommend', {
+    fetch('https://movie-recommendation-app-ashy.vercel.app/recommend', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
