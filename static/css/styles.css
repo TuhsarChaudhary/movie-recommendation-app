@@ -4,11 +4,11 @@ body {
     color: #f1f1f1;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
 }
 
-.navbar {
+/* .navbar {
     width: 100%;
     padding: 15px;
     background-color: #333;
@@ -16,12 +16,13 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-}
+    z-index: 1000;
+} */
 
-.navbar h1 {
+/* .navbar h1 {
     margin: 0;
     color: #ff4d4d;
-}
+} */
 
 .main-content {
     flex: 1;
@@ -77,18 +78,38 @@ button:hover {
     width: 100%;
     max-width: 600px;
     padding: 20px;
-    background-color: #2a2a2a;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     text-align: center;
     animation: fadeIn 1s ease-in-out;
     display: none; /* Hide by default */
+    position: relative;
+}
+
+.recommendation-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.recommendation-container > div {
+    position: relative;
+    z-index: 2;
 }
 
 #recommendation {
     margin-top: 20px;
     font-size: 18px;
-    color: #ff4d4d;
+    color: #f1f1f1;
 }
 
 .footer {
@@ -109,4 +130,49 @@ button:hover {
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container, .recommendation-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .navbar, .footer {
+        padding: 10px;
+    }
+
+    .navbar h1, .footer p {
+        font-size: 18px;
+    }
+
+    select, button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    #recommendation {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container, .recommendation-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* .navbar h1, .footer p {
+        font-size: 16px;
+    } */
+
+    select, button {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    #recommendation {
+        font-size: 14px;
+    }
 }
