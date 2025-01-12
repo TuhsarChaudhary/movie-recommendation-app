@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)  # Allow cross-origin requests for local development
+CORS(app)  
 
 with open('movies.json') as f:
     movie_data = json.load(f)
